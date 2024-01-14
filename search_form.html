@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="search_form.css">
+</head>
+<body>
+<form action="">
+    <section class="row">
+        <h2 class="head">Тип кузова</h2>
+        <input type="checkbox" id="universal">
+        <label for="universal">Універсал</label><br>
+        <input type="checkbox" id="sedan">
+        <label for="sedan">Седан</label><br>
+        <input type="checkbox" id="hetchback">
+        <label for="hetchback">Хетчбек</label><br>
+        <input type="checkbox" id="cupe">
+        <label for="cupe">Купе</label><br>
+        <input type="checkbox" id="cabriolet">
+        <label for="cabriolet">Кабріолет</label>
+    </section>
+    <hr>
+    <section class="row">
+        <h2 class="head">Марка авто</h2>
+        <label for="auto">Оберить авто</label>
+        <select name="auto" id="auto">
+            <option value="Porsche">Porsche</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Ford">Ford</option>
+            <option value="Honda">Honda</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Nissan">Nissan</option>
+        </select>
+    </section>
+    <hr>
+    <section class="row">
+        <h2 class="head">Країна виробник</h2>
+        <label for="country">Оберить країну</label>
+        <select name="country" id="country">
+            <option value="Німеччина">Німеччина</option>
+            <option value="Японія">Японія</option>
+            <option value="Франція">Франція</option>
+            <option value="США">США</option>
+            <option value="Корея">Корея</option>
+            <option value="Італія">Італія</option>
+            <option value="Індія">Індія</option>
+            <option value="Данія">Данія</option>
+        </select>
+    </section>
+    <hr>
+    <section class="row">
+        <h2 class="head">Ціна</h2>
+        <label for="price_from"></label>
+        <input type="number" id="price_from" placeholder="Від">
+        <label for="price_to"></label>
+        <input type="number" id="price_to" placeholder="До"><br><br>
+        <label for="currency">Оберить валюту</label>
+        <select name="currency" id="currency">
+            <option value="USD">$</option>
+            <option value="EUR">€</option>
+            <option value="UAH">₴</option>
+        </select>
+    </section>
+    <hr>
+    <section class="row">
+        <h2 class="head">Рік випуску</h2>
+        <label for="built_year_from">Рік,від</label>
+        <select name="built_year_from" id="built_year_from">
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+        </select>
+        <label for="built_year_to">Рік,до</label>
+        <select name="built_year_to" id="built_year_to">
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+        </select>
+    </section>
+    <hr>
+    <section class="row">
+        <h2 class="head">Стан</h2>
+        <label for="state"></label>
+        <select name="state" id="state" multiple>
+            <optgroup label="Участь в ДТП">
+                <option value="clear">Не був у ДТП</option>
+                <option value="not_clear">Був у ДТП</option>
+            </optgroup>
+            <optgroup label="Технічний стан">
+                <option value="state_1">Повністю непошкоджене</option>
+                <option value="state_2">Професійно відремонтовані пошкодження</option>
+                <option value="state_1">Не відремонтовані пошкодження</option>
+                <option value="state_2">Не на ходу / На запчастини</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <label for="color">Колір авто</label>
+        <input type="color" id="color"><br>
+        <label for="quantity">Кількість</label>
+        <input type="range" id="quantity"><br>
+        <label for="date">Дата</label>
+        <input type="date" id="date">
+    </section>
+
+    <br>
+    <label for="reset"></label>
+    <input type="reset" id="reset">
+    <label for="search"></label>
+    <input type="submit" id="search">
+</form>
+
+</body>
+</html>

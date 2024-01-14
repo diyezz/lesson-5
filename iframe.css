@@ -1,0 +1,10 @@
+.center-iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-iframe iframe {
+    border: #282c35;
+    opacity: 0.9;
+}

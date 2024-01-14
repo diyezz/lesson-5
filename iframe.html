@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iframe</title>
+    <link rel="stylesheet" href="iframe.css">
+    <style>
+        .center-iframe {
+            position: relative;
+        }
+
+        .center-iframe iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .center-iframe iframe:last-child {
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="center-iframe">
+    <iframe src="search_form.html" title="search form" width="450" height="1400"></iframe>
+    <iframe width="1500" height="1300" src="https://www.youtube.com/embed/8LJLFZt5LCY?si=41HEVI5B0LhD52Xb"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+
+</div>
+</body>
+</html>
