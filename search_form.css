@@ -1,0 +1,46 @@
+fieldset {
+    border: 2px solid #4CAF50;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    font-family: cursive;
+}
+
+input[type=checkbox],
+input[type=number],
+input[type=color],
+input[type=range],
+input[type=date] {
+    box-sizing: border-box;
+    box-shadow: #282c35;
+    border-radius: 4px;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+/* Стилизация основного контейнера селекта */
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    width: 100%;
+    font-family: cursive;
+}
+
+input[type=reset],
+input[type=submit] {
+    font-family: cursive;
+}
+
+
