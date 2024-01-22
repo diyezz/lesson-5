@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук автомобілів</title>
+
+    <!-- Загальні стилі виношу окремо -->
+    <style>
+        form {
+            width: 80%;
+            margin: 50px;
+            line-height: 1.55;
+        }
+
+        p {
+            font-size: 25px;
+            margin: 0;
+        }
+
+        legend {
+            font-size: 35px;
+        }
+
+        label,
+        span {
+            font-size: 20px;
+            }
+
+        select {
+            font-size: 15px;
+            margin-left: 12px;
+        }
+
+        button {
+            font-size: 20px;
+            margin-top: 12px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend><strong>Пошук автомобілів</strong></legend>
+            <!-- У даному розділі форми додаю поля для вводу і застосовую тег select з атрибутами option та optgroup, 
+            та іnput type= chekbox, number та range-->
+            <label for="type_body"><strong>Тип кузова:</strong></label>
+            <select name="type_body" id="type_body">
+                <option value=" all-type">Всі типи кузова</option>
+                <option value="sedan">Седан</option>
+                <option value="compartment">Купе</option>
+                <option value="suv">Позашляховик</option>
+                <option value="crossover">Кросовер</option>
+                <option value="hatchback">Хетчбек</option>
+                <option value="universal">Універсал</option>
+                <option value="cabriolet">Кабріолет</option>
+                <option value="pickup">Пікап</option>
+            </select>
+            <br>
+
+            <label for="country"><strong>Країна виробник:</strong></label>
+            <select name="country" id="country">
+                <option value="choice_country">Оберіть країну</option>
+                <optgroup label="Європа">
+                    <option value="italy">Італія</option>
+                    <option value="australia">Австралія</option>
+                    <option value="france">Франція</option>
+                    <option value="germany">Німеччина</option>
+                    <option value="poland">Poland</option>
+                </optgroup>
+                <optgroup label="Азія">
+                    <option value="japan">Японія</option>
+                    <option value="china">Китай</option>
+                    <option value="korea">Корея</option>
+                </optgroup>
+                <option value="usa">США</option>
+
+            </select>
+            <br>
+
+            <label for="brand"><strong>Марка:</strong></label>
+            <select name="brand" id="brand">
+                <option value="choice_brand">Оберіть марку</option>
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="ford">Ford</option>
+                <option value="honda">Honda"</option>
+                <option value="opel">Opel</option>
+                <option value="mercedes-benz">Mercedes-Benz</option>
+                <option value="volkswagen">Volkswagen</option>
+            </select>
+            <br>
+
+            <span><strong>Ціна:</strong></span>
+            <input type="number" id="price_for" name="price" min="0" placeholder="Від" style="margin-left: 12px;">
+            <input type="number" id="price_to" name="price" min="0" placeholder="До">
+
+            <select name="currency" id="currency">
+                <option value="$">$</option>
+                <option value="₴">&euro;</option>
+                <option value="uan">грн</option>
+            </select>
+            <br>
+
+            <label for="pdv" style="margin-left: 65px;">Ціна з ПДВ</label>
+            <input type="checkbox" id="pdv" name="pdv" value="pdv">
+            <br>
+            <label for="auction" style="margin-left: 65px;">Можливий торг</label>
+            <input type="checkbox" id="auction" name="auction" value="auction">
+            <br>
+            <label for="pay" style="margin-left: 65px;">Можлива оплата частинами</label>
+            <input type="checkbox" id="pay" name="pay" value="pay">
+            <br>
+
+            <span><strong>Рік випуску:</strong></span>
+            <input type="number" id="year_for" name="price" min="1990" max="2023" placeholder="Від"
+                style="margin-left: 12px;">
+            <input type="number" id="year_to" name="price" placeholder="До" min="1990" max="2023">
+            <br>
+            <label for="choice_year" style="margin-left: 120px;">Від 1990 до 2023</label>
+            <input type="range" id="choice_year" name="choice_year" min="1990" max="2023">
+            <br>
+            <hr>
+            <!-- Кінець розділу -->
+
+            <!--У цій частині додаю розділ "Стан" та використовую іnput type=chekbox -->
+            <p><strong>Стан</strong></p>
+            <label for="accident" style="margin-left: 12px;">Участь в ДТП</label>
+            <input type="checkbox" id="accident" name="accident" value="accident">
+            <br>
+            <label for="credit" style="margin-left: 12px;">Авто в кредиті</label>
+            <input type="checkbox" id="credit" name="credit" value="credit">
+            <br>
+            <label for="registration" style="margin-left: 12px;">Перша реєстрація</label>
+            <input type="checkbox" id="registration" name="registration" value="registration">
+            <br>
+            <label for="owner" style="margin-left: 12px;">Перший власник</label>
+            <input type="checkbox" id="owner" name="owner" value="owner">
+            <br>
+            <hr>
+            <!-- Кінець розділу -->
+
+            <!-- У цьому розділі використала також input з атрибутом checkbox та color -->
+            <p><strong>Технічні характеристики</strong></p>
+            <span><strong>Тип палива:</strong></span>
+            <label for="gas" style="margin-left: 12px;">Газ</label>
+            <input type="checkbox" id="gas" name="gas" value="gas">
+            <label for="diesel" style="margin-left: 7px;">Дизель</label>
+            <input type="checkbox" id="diesel" name="diesel" value="diesel">
+            <label for="hybrid" style="margin-left: 7px;">Гібрид</label>
+            <input type="checkbox" id="hybrid" name="hybrid" value="hybrid">
+            <label for="electric" style="margin-left: 7px;">Електро</label>
+            <input type="checkbox" id="electric" name="electric" value="electric">
+            <br>
+
+            <span><strong>Тип коробки передач:</strong></span>
+            <label for="mechanics" style="margin-left: 12px;">Ручна/Механіка</label>
+            <input type="checkbox" id="mechanics" name="mechanics" value="mechanics">
+            <label for="automaton" style="margin-left: 7px;">Автомат</label>
+            <input type="checkbox" id="automaton" name="automaton" value="automaton">
+            <label for="tiptronic" style="margin-left: 7px;">Типтронік</label>
+            <input type="checkbox" id="tiptronic" name="tiptronic" value="tiptronic">
+            <label for="robot" style="margin-left: 7px;">Робот</label>
+            <input type="checkbox" id="robot" name="robot" value="robot">
+            <label for="variator" style="margin-left: 7px;">Варіатор</label>
+            <input type="checkbox" id="variator" name="variator" value="variator">
+            <br>
+
+            <label for="favcolor"><strong>Колір:</strong></label>
+            <input type="color" name="favcolor" id="favcolor" style="margin-left: 12px;" value="#000000">
+            <br>
+            <hr>
+            <!-- Кінець розділу -->
+
+            <!--У цій частині додаю додаткові опції та використовую іnput type=chekbox -->
+            <p><strong>Додаткові опції</strong></p>
+            <span><strong>Комфорт:</strong></span>
+            <label for="comfort-1" style="margin-left: 10px;">Адаптивний круїз</label>
+            <input type="checkbox" id="comfort-1" name="comfort-1" value="comfort-1">
+            <br>
+            <label for="comfort-2" style="margin-left: 100px;">Вибір режиму руху</label>
+            <input type="checkbox" id="comfort-2" name="comfort-2" value="comfort-2">
+            <br>
+            <label for="comfort-3" style="margin-left: 100px;">Доводчик дверей</label>
+            <input type="checkbox" id="comfort-3" name="comfort-3" value="comfort-3">
+            <br>
+            <label for="comfort-4" style="margin-left: 100px;">Люк</label>
+            <input type="checkbox" id="comfort-4" name="comfort-4" value="comfort-4">
+            <br>
+            <label for="comfort-5" style="margin-left: 100px;">Оздоблення салону шкірою</label>
+            <input type="checkbox" id="comfort-5" name="comfort-5" value="comfort-5">
+            <br>
+            <hr>
+            <!-- Кінець розділу -->
+
+            <!-- У додаткових фільтрах до пошуку застосовую input type= datetime-local та button -->
+            <p><strong>Додаткові фільтри пошуку</strong></p>
+            <span> <strong>Дата та час опублікування:</strong> </span>
+            <input type="datetime-local" id="datatime" name="datatime" style="margin-left: 12px;">
+            <br>  
+        </fieldset>
+        <button>Пошук</button>
+    </form>
+</body>
+</html>
